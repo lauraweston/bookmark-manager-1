@@ -1,4 +1,6 @@
 source "https://rubygems.org"
 
-gem 'data_mapper'
-gem 'dm-postgres-adapter'
+ruby "2.3.1"
+
+gem "data_mapper"
+gem "dm-postgres-adapter"
