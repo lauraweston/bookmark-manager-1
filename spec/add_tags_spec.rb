@@ -1,10 +1,10 @@
 feature 'Adding tags' do
-  scenario 'adding a tag to the link in bookmark manager' do
+  scenario 'add a tag to a new link' do
 
     visit '/links/new'
     fill_in 'title', :with => 'Makers Academy'
     fill_in 'url', :with => 'http://www.makersacademy.com'
-    fill_in 'tag', :with => 'bananas'
+    fill_in 'tag_name', :with => 'bananas'
     click_button 'Add link'
 
     expect(page.status_code).to eq 200
