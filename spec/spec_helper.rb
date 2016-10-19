@@ -5,6 +5,7 @@ require 'capybara/rspec'
 require 'database_cleaner'
 require 'data_mapper'
 require 'dm-postgres-adapter'
+require 'dm-rspec'
 
 Capybara.app = BookmarkManager
 
@@ -30,6 +31,8 @@ RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
+
+  config.include(DataMapper::Matchers)
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
